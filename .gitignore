@@ -1,4 +1,10 @@
-venv-clean/
-__pycache__/
+# Environments
+.env
+
+# Django
+*.log
+*.pot
 *.pyc
+__pycache__/
 db.sqlite3
+/staticfiles
