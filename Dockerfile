@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+# <<<<<<< HEAD
 # Use an official Python runtime as a parent image
 FROM python:3.9-slim
 
@@ -19,7 +19,7 @@ EXPOSE 8000
 
 # Run Gunicorn
 CMD ["gunicorn", "--bind", "0.0.0.0:8000", "backend.wsgi:application"]
-=======
+# =======
 # Use an official Python runtime as the base image
 FROM python:3.10-slim
 
@@ -50,5 +50,5 @@ COPY . /app/
 # RUN python manage.py migrate
 
 # Start the Django development server
-# CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
 # >>>>>>> cb1b3be (Add Dockerfile and compose.yaml for Defang deployment)
