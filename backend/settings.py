@@ -102,11 +102,14 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(
-        default='sqlite:///db.sqlite3',
-        conn_max_age=600,
-        ssl_require=os.environ.get('DATABASE_SSL', 'False').lower() == 'true',
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'koyebdb',
+        'USER': 'koyeb-adm',
+        'PASSWORD': 'npg_Esl3xP4HBafA',
+        'HOST': 'ep-aged-wildflower-a4gbzbo6.us-east-1.pg.koyeb.app',
+        'OPTIONS': {'sslmode': 'require'},
+    }
 }
 
 
